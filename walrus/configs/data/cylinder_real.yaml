@@ -1,0 +1,17 @@
+defaults:
+- field_index_map_override: bc_only_override
+well_base_path: /projects/u6hp/hmian/well
+wandb_data_name: cylinder_real
+module_parameters:
+  _target_: walrus.data.MixedWellDataModule
+  batch_size: 1
+  n_steps_input: 6
+  n_steps_output: 1
+  min_dt_stride: 1
+  max_dt_stride: 1
+  max_samples: 200
+  well_dataset_info:
+    cylinder_real:
+      path: /projects/u6hp/hmian/well/cylinder_real/
+      include_filters: []
+      exclude_filters: []

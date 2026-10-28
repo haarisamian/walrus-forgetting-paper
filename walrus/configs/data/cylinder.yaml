@@ -1,0 +1,17 @@
+defaults:
+- field_index_map_override: bc_only_override
+well_base_path: /cephfs/store/gr-mc2473/ham51/realpdebench/well
+wandb_data_name: cylinder_numerical
+module_parameters:
+  _target_: walrus.data.MixedWellDataModule
+  batch_size: 4
+  n_steps_input: 6
+  n_steps_output: 1
+  min_dt_stride: 1
+  max_dt_stride: 1
+  max_samples: 2000
+  well_dataset_info:
+    cylinder_numerical:
+      path: /cephfs/store/gr-mc2473/ham51/realpdebench/well/cylinder_numerical/
+      include_filters: []
+      exclude_filters: []
